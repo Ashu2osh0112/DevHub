@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
-
-public class ProjectStatus {
+public enum ProjectStatus {
+    ACTIVE,
+    COMPLETED,
+    DELAYED,
+    BLOCKED
 }
