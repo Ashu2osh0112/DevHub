@@ -45,6 +45,6 @@ public class Project {
         this.language = language;
         this.createdAt = LocalDateTime.now();
         this.status = ProjectStatus.ACTIVE;
-        this.pinned = False;
+        this.pinned = false;
     }
 }
