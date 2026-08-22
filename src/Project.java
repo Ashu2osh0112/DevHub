@@ -10,6 +10,15 @@ public class Project {
     private boolean pinned;
 
 
+    @Override
+    public String toString() {
+        return "Project{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", status=" + status +
+                '}';
+    }
+
     public int getId(){
         return this.id;
     }
@@ -39,7 +48,20 @@ public class Project {
         return this.status;
     }
 
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setStatus(ProjectStatus status){
+        this.status =  status;
+    }
+
+    public void setPinned(boolean pinned){
+        this.pinned = pinned;
+    }
+
     public boolean isPinned(){
+
         return this.pinned;
     }
 

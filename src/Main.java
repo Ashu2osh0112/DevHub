@@ -1,27 +1,39 @@
-import java.util.ArrayList;
-
 public class Main{
     public static void main(String[] args){
 
-        ArrayList<Project> projects = new ArrayList<>();
+        ProjectManager manager = new ProjectManager();
 
-        Project project1 = new Project(1, "PacMan", "C:\\Users\\Ashut\\IdeaProjects", "Java");
+        Project project1 = new Project(1, "DevHub", "C_Drive", "Java");
 
-        projects.add(project1);
+        manager.addProject(project1);
 
-        Project project2 = new Project(2, "DevHub", "C:\\Users\\Ashut\\IdeaProjects\\DevHub", "Java");
+        System.out.println(manager.getProjects());
 
-        projects.add(project2);
+        System.out.println(manager.findById(1));
 
-        Project project3 = new Project(3, "PyLib", "C:\\Users\\Ashut\\IdeaProjects\\DevHub", "Java");
+        System.out.println(manager.findById(10));
 
-        projects.add(project3);
+        System.out.println(manager.findByName("DevHub"));
 
-        System.out.println(projects.size());
+        Project project2 = new Project(2, "Pacman", "D_Drive", "Python");
 
-        for (Project project : projects) {
-            System.out.println(project.getName());
-        }
+        manager.addProject(project2);
 
+        System.out.println(manager.getProjects());
+
+        manager.deleteProject(2);
+
+        System.out.println(manager.getProjects());
+
+        System.out.println(manager.findById(1).getStatus());
+
+        manager.modifyProjectStatus(1, ProjectStatus.COMPLETED);
+
+        System.out.println(manager.findById(1).getStatus());
+
+        manager.pinProject(1);
+
+        System.out.println(manager.getProjects());
     }
+
 }
