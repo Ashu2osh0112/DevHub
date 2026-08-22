@@ -1,13 +1,27 @@
+import java.util.ArrayList;
+
 public class Main{
     public static void main(String[] args){
+
+        ArrayList<Project> projects = new ArrayList<>();
+
         Project project1 = new Project(1, "PacMan", "C:\\Users\\Ashut\\IdeaProjects", "Java");
 
-        System.out.println(project1.getId());
-        System.out.println(project1.getName());
-        System.out.println(project1.getPath());
-        System.out.println(project1.getLanguage());
-        System.out.println(project1.getCreatedAt());
-        System.out.println(project1.getStatus());
+        projects.add(project1);
+
+        Project project2 = new Project(2, "DevHub", "C:\\Users\\Ashut\\IdeaProjects\\DevHub", "Java");
+
+        projects.add(project2);
+
+        Project project3 = new Project(3, "PyLib", "C:\\Users\\Ashut\\IdeaProjects\\DevHub", "Java");
+
+        projects.add(project3);
+
+        System.out.println(projects.size());
+
+        for (Project project : projects) {
+            System.out.println(project.getName());
+        }
 
     }
 }

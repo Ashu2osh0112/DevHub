@@ -15,22 +15,27 @@ public class Project {
     }
 
     public String getName(){
+
         return this.name;
     }
 
     public String getPath(){
+
         return this.path;
     }
 
     public String getLanguage(){
+
         return this.language;
     }
 
     public LocalDateTime getCreatedAt(){
+
         return this.createdAt;
     }
 
     public ProjectStatus getStatus(){
+
         return this.status;
     }
 
